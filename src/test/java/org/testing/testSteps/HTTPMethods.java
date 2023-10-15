@@ -30,7 +30,10 @@ public class HTTPMethods
 		System.out.println("URI is " + urikey);
 		System.out.println("Status code is " + res.statusCode());
 		
-		
+	}
+	
+	public void GetMethod()
+	{
 		
 	}
 
