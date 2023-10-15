@@ -32,9 +32,25 @@ public class HTTPMethods
 		
 	}
 	
-	public void GetMethod()
+	public void GetAllMethod(String uriKeyValue)
 	{
 		
+		String urikey= prob.getProperty(uriKeyValue);
+		Response res= 
+		given()
+		.contentType(ContentType.JSON)
+		.when()
+		.get(urikey);
+		
+		
+		System.out.println("URI is " + urikey);
+		System.out.println("Status code is " + res.statusCode());
+		
+		System.out.println("Response Data is ");
+		System.out.println(res.asString());
+		
+		
 	}
-
 }
+	
+
